@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(106, 191, 210);
+        }
+        button{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Score Tracker</h1>
+    <input type="number" id="scoreInput" placeholder="Enter score">
+    <button onclick="addScore()">Add Score</button>
+    <button onclick="clearScore()">Clear</button>
+    <table id="scoreTable">
+        <tr><th>Score</th></tr>
+    </table>
+    <p id="average">Average: 0</p>
+
+    <script>
+        let shoppingArray = [];
+        function addScore(){
+            let score = document.getElementById("scoreInput").value;
+            if(score > 0){
+                shoppingArray.push(score);
+                updateList();
+                document.getElementById("scoreInput").value="";
+            }
+            else{
+                alert("Enter the positive score");
+            }
+        }
+        function updateTable(){
+            let table = document.getElementById("scoreTable");
+            list.innerText = "";
+            let header = document.createElement("tr");
+            header.innerHTML = "<th>Score</th>";
+            table.appendChild(header);
+            for(let i=0; i<shoppingArray.length; i++) {
+                let row = document.createElement("tr");
+                let cell = document.createElement("td");
+                cell.innerText = scoreArray[i];
+                row.appendChild(cell);
+                table.appendChild(row);
+            }
+        }
+        function calculateAverage(){
+            if (scoreArray.length === 0) {
+                document.getElementById("average").innerText = "Average: 0";
+                return;
+            }
+            let sum = 0;
+            for(let i=0; i<scoreArray.length; i++){
+                sum += scoreArray[i];
+            }
+            let avg = sum / scoreArray.length;
+            document.getElementById("average").innerText = "Average: " + avg.toFixed(2);
+        }
+        function clearScore(){
+            scoreArray = [];
+            updateTable();
+            calculateAverage();
+        }
+
+    </script>
+</body>
+</html>

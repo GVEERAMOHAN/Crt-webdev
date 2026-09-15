@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+        input { 
+            padding: 10px;
+            width: 200px;  
+            }
+        button {
+            width: 200px;
+            padding: 10px 20px;
+            background: green;
+            color: white; border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: lime;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        li {
+            background: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        let shoppingArray = [];
+        function addItem() {
+            let item = document.getElementById("itemInput").value;
+            if (item) {
+                shoppingArray.push(item);
+                updateList();
+                document.getElementById("itemInput").value = ""
+            }
+        }  
+        
+        function updateList() {
+            let list = document.getElementById("shoppingList");
+            list.innerText = "";
+            for (let i = 0; i < shoppingArray.length; i++) {
+                let li = document.createElement("li");
+                li.innerText = shoppingArray[i];
+                list.appendChild(li);
+            }
+        }
+
+        function clearList() {
+            shoppingArray = [];
+            updateList();
+        }
+    </script>
+</head>
+<body>
+    <h1>Shopping List</h1>
+    <input type="text" id="itemInput" placeholder="Enter item">
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="clearList()">Clear List</button>
+    <ul id="shoppingList"></ul>
+</body>
+</html>

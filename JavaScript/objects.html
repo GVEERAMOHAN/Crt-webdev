@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // creating a object
+        let person = {
+            Name: "Mohan",
+            age: 18,
+            city: "Hyd"
+        };
+        console.log(person.Name);
+        console.log(person["age"]);
+        
+        // adding properity
+        let student = {
+            Name: "mohanreddy",
+            city: "hyderabad"
+        };
+        student.grade= 'A';
+        student["rollnumber"]= 23;
+        console.log(student);
+
+        // deleting properity
+        delete student.city;
+        console.log(student);
+
+        // updating a properity
+        student['rollnumber'] = 24;
+        console.log(student);
+
+        // 
+        let obj = {model: "Tesla"};
+        console.log("color in obj");
+
+        // merging objects
+        let obj1 = {name: "mohan"};
+        let obj2 = {age: 18};
+        let obj3 = {...obj1,...obj2};
+        console.log(obj3);
+
+        let new_obj3;
+
+        // nested objects
+        let person1 = {
+            name: "Raj",
+            address: {
+                city: "Hyd",
+                pincode: 500050
+            }
+        };
+        console.log(person1.address.city);
+
+        // functions inside objects
+        let car = {
+            name: "BMW",
+            speed: 120,
+            start: function() {
+                console.log("Car started");
+            }
+        };
+        car.start();
+
+        // this keyword-this refers to the current object
+        let stu = {
+            name: "Anisha",
+            marks: Number(prompt("Enter your total marks: ")),
+            total: 500,
+            getPercentage: function(){
+                return (this.marks/this.total) * 100;
+            }
+        };
+        console.log(stu.getPercentage());
+
+        // for-in-loop is used to loop through keys of an object
+        let laptop = {
+            brand: "HP",
+            price: 55000,
+            ram: "8GB"
+        };
+        console.log(laptop);
+        for (let key in laptop) {
+            console.log(keys, laptop[key]);
+        }
+
+        function createStudent(name, age, grade){
+            return {
+                name: name,
+                age: Number(age),
+                grade: Number(grade),
+                isPassing: grade>=40
+            };
+        }
+        let name = prompt("Enter student name: ");
+        let age = prompt("Enter age: ");
+        let grade = prompt("Enter grade(out of 100): ");
+        let student = createStudent(name, age, grade);
+        document.getElementById("result").innerText = 
+        `name: ${student.name}
+        age: ${student.age}
+        grade: ${student.grade}
+        passing: ${student.isPassing ? "Yes" : "No"}`;
+
+        
+    </script>
+</body>
+</html>

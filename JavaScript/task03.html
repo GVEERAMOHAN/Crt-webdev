@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <p id="result"></p>
+
+    <script>
+        let str = "Hello World";
+        console.log(str.slice(0, 5));
+
+        let text = "JavaScript";
+        console.log(text.substring(4, 10));
+        console.log(text.slice(-6));
+
+        console.log(text.substring(-6));
+        console.log(text.slice(6, 2));
+      
+        console.log(text.substring(6, 2));
+
+        let name = "shivani";
+        console.log(name.toUpperCase());
+
+        let NAME = "VANDANA";
+        console.log(NAME.toLowerCase());
+
+        let cap = "   hello   ";
+        console.log(cap);
+
+        console.log(cap.trim());
+
+        let rem = "I love apples";
+        console.log(rem);
+        let newRem = rem .replace("apples", "bananas");
+        console.log(newRem);
+
+        let sen = "red,green,blue";
+        console.log(sen);
+        let colors = sen.split(",");
+        console.log(colors);
+
+        let Namm = "Shivani";
+        let city = "Hyd";
+        console.log("Hello " + Namm + " from " + city);
+        console.log(`Hello ${Namm} from ${city}`);
+
+        function reverseString(str1){
+            let reversed = "";
+            for (let i=str1.length-1; i>=0; i--){
+                reversed += str1[i]; 
+            }
+            return reversed;
+        }
+        let input = prompt("Enter any word: ");
+        let reversed = reverseString(input);
+        document.getElementById("result").innerText = "Reversed: " + reversed;
+
+    </script>
+</body>
+</html>

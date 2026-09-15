@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #0927e9;
+    padding: 10px 80px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.logo img{
+    width: 50px;
+}
+
+.navbar{
+    display:flex;
+    gap:20px;
+}
+
+.navbar a{
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 1 rem;
+    color:#0927e9;
+    transition:0.3s;
+    position: relative;
+}
+
+.navbar a::after{
+    content:"";
+    width:0;
+    height:3px;
+    background: #5850cf;
+    position:absolute;
+    bottom:-4px;
+    left:0;
+    transition:0.5s;
+}
+
+.navbar a:hover::after{
+    width:100%;
+}
+
+.header-btn a{
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.header-btn .sign-in{
+    background-color: #fff;
+    color: #0927e9;
+    border-radius: 0.5rem;
+    border: 2px solid #fff;
+    text-wrap: nowrap;
+}
+
+.header-btn .sign-in:hover{
+    background-color: #0927e9;
+    color:#fff;
+    border: 2px solid #0927e9;
+}
+
+.header-btn .sign-up{
+    background-color: #fff;
+    color:#0927e9;
+    border-radius: 0.5rem;
+    border: 2px solid #fff;
+    text-wrap: nowrap;
+}
+
+.header-btn .sign-up:hover{
+    background-color: #0927e9;
+    color:#fff;
+    border: 2px solid #0927e9;
+}
+
+.Home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(img/MustangBackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 100px;
+    color: #fff;
+    text-shadow: apx apx 8px rgba(0,0,0,0.7);
+}
+
+.Home::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.text{
+    position: relative;
+    z-index: 2;
+}
+
+.text h1{
+    font-size: 3.5rem;
+    letter-spacing: .5px;
+    line-height: 1.2;
+    color: #0927e9;
+}
+
+.text span{
+    color:#fff;
+}
+
+.text p{
+    margin: 0.5rem 0 1.5rem;
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+
+.Vehicles {
+    padding: 80px 100px;
+    background: #f5f6fa;
+}
+
+.Vehicles .heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Vehicles .heading span {
+    color: #0927e9;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.vehicles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.vehicles-container .box {
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    transition: 0.3s;
+}
+
+.vehicles-container .box:hover {
+    transform: scale(1.05);
+}
+
+.vehicles-container .box img {
+    width: 100%;
+    height: 200px;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.vehicles-container .box h2 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.vehicles-container .box h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0.2rem 0 0.5rem;
+    color: #0927e9;
+}
+
+.vehicles-container .box .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    background: #0927e9;
+    color: #fff;
+
+    padding: 10px;
+    border-radius: 0.5rem;
+    margin: 3px;
+
+    transition: 0.3s;
+}
+
+.vehicles-container .box .btn:hover {
+    background: #071ca8;
+}
+
+.Shop {
+    padding: 80px 100px;
+    background: #f5f6fa;
+}
+
+.Shop .heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Shop .heading span {
+    color: #0927e9;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Shop .heading h1 {
+    font-size: 2.5rem;
+    margin-top: 5px;
+}
+
+.shop-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.shop-box {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.shop-box:hover {
+    transform: translateY(-8px);
+}
+
+.shop-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.shop-info {
+    padding: 20px;
+}
+
+.shop-info h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.shop-info p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 8px 0;
+}
+
+.shop-info h3 {
+    color: #0927e9;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.shop-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    width: 100%;
+
+    padding: 11px;
+
+    background: #0927e9;
+    color: #fff;
+
+    border-radius: 0.5rem;
+
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background: #071ca8;
+}
+
+.About {
+    padding: 80px 100px;
+    background: #f5f6fa;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-text span {
+    color: #0927e9;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 10px 0 20px;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-btn {
+    display: inline-block;
+    background: #0927e9;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 0.5rem;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: #071ca8;
+}
+
+.about-stats {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-box {
+    text-align: center;
+    background: #fff;
+    padding: 25px 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box h2 {
+    color: #0927e9;
+    font-size: 2rem;
+}
+
+.stat-box p {
+    color: #555;
+}
+
+.Reviews {
+    padding: 80px 100px;
+    background: #f5f6fa;
+}
+
+.Reviews .heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Reviews .heading span {
+    color: #0927e9;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Reviews .heading h1 {
+    font-size: 2.5rem;
+    margin-top: 5px;
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.review-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 1rem;
+
+    box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.review-box:hover {
+    transform: translateY(-8px);
+}
+
+.stars {
+    margin-bottom: 15px;
+}
+
+.stars i {
+    color: #0927e9;
+    font-size: 18px;
+}
+
+.review-box > p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #0927e9;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+}
+
+.review-user h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.review-user span {
+    font-size: 12px;
+    color: #777;
+}
+
+.Register {
+    padding: 80px 100px;
+    background: #f5f6fa;
+}
+
+.register-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.register-text span {
+    color: #0927e9;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.register-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 10px 0 20px;
+}
+
+.register-text p {
+    color: #555;
+    line-height: 1.7;
+    max-width: 450px;
+}
+
+.register-form {
+    background: #fff;
+    padding: 35px;
+    border-radius: 1rem;
+    box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.input-box {
+    margin-bottom: 18px;
+}
+
+.input-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-box input:focus {
+    border: 2px solid #0927e9;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 0.5rem;
+    background: #0927e9;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: #071ca8;
+}
+
+.login-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666;
+}
+
+.login-text a {
+    color: #0927e9;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 10px 30px;
+    }
+
+    .Home {
+        padding: 0 50px;
+    }
+
+    .Vehicles,
+    .About,
+    .Reviews,
+    .Register {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .vehicles-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container,
+    .register-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 10px 20px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .Home {
+        padding: 0 25px;
+    }
+
+    .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .Vehicles,
+    .About,
+    .Reviews,
+    .Register {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .vehicles-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .register-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .register-form {
+        padding: 25px;
+    }
+}

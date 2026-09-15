@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myText">Hello world</h1>
+    <button onclick="findText()">Find Text</button>
+
+    <script>
+        function findText(){
+            let x = document.getElementById("myText");
+            alert(x.textContent);
+        }
+    </script>
+</body>
+</html>

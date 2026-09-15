@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindYourBusiness</title>
+    <link rel="stylesheet" href="project.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo"><i class="bx bx-briefcase"></i> MindYourBusiness</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="#sales">Sales</a></li>
+            <li><a href="#expenses">Expenses</a></li>
+            <li><a href="#inventory">Inventory</a></li>
+            <li><a href="#tasks">Tasks</a></li>
+        </ul>
+        <a href="#dashboard" class="header-btn">Dashboard</a>
+    </header>
+    <section class="home" id="home">
+        <div class="home-text">
+            <span>Simple Business Management</span>
+            <h1>Keep your <b>business</b> organized.</h1>
+            <p>MindYourBusiness helps small business owners manage customers, sales, expenses, inventory and daily tasks in one place.</p>
+            <a href="#dashboard" class="main-btn">View Dashboard</a>
+        </div>
+    </section>
+    <section class="dashboard" id="dashboard">
+        <div class="heading">
+            <span>Business Overview</span>
+            <h1>Your Dashboard</h1>
+        </div>
+        <div class="dashboard-container">
+            <div class="dash-box">
+                <i class="bx bx-rupee"></i>
+                <h3>₹<span id="salesTotal">0</span></h3>
+                <p>Total Sales</p>
+            </div>
+            <div class="dash-box">
+                <i class="bx bx-wallet"></i>
+                <h3>₹<span id="expenseTotal">0</span></h3>
+                <p>Total Expenses</p>
+            </div>
+            <div class="dash-box">
+                <i class="bx bx-line-chart"></i>
+                <h3>₹<span id="profitTotal">0</span></h3>
+                <p>Estimated Profit</p>
+            </div>
+            <div class="dash-box">
+                <i class="bx bx-error"></i>
+                <h3><span id="lowStock">0</span></h3>
+                <p>Low Stock</p>
+            </div>
+        </div>
+    </section>
+    <section class="manage" id="customers">
+        <div class="heading">
+            <span>Customer Management</span>
+            <h1>Customers</h1>
+        </div>
+        <form id="customerForm" class="form">
+            <input type="text" id="customerName" placeholder="Customer Name" required>
+            <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+            <input type="number" id="customerDue" placeholder="Pending Amount" min="0" required>
+            <button type="submit">Add Customer</button>
+        </form>
+        <div id="customerList" class="list"></div>
+    </section>
+    <section class="manage" id="sales">
+        <div class="heading">
+            <span>Sales Management</span>
+            <h1>Record a Sale</h1>
+        </div>
+        <form id="salesForm" class="form">
+            <input type="text" id="saleProduct" placeholder="Product Name" required>
+            <input type="number" id="saleAmount" placeholder="Sale Amount" min="1" required>
+            <button type="submit">Add Sale</button>
+        </form>
+    </section>
+    <section class="manage" id="expenses">
+        <div class="heading">
+            <span>Expense Management</span>
+            <h1>Record an Expense</h1>
+        </div>
+        <form id="expenseForm" class="form">
+            <input type="text" id="expenseName" placeholder="Expense Name" required>
+            <input type="number" id="expenseAmount" placeholder="Amount" min="1" required>
+            <button type="submit">Add Expense</button>
+        </form>
+    </section>
+    <section class="manage" id="inventory">
+        <div class="heading">
+            <span>Inventory Management</span>
+            <h1>Products & Stock</h1>
+        </div>
+        <form id="inventoryForm" class="form">
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <input type="number" id="productStock" placeholder="Stock Quantity" min="0" required>
+            <button type="submit">Add Product</button>
+        </form>
+        <div id="inventoryList" class="list"></div>
+    </section>
+    <section class="manage" id="tasks">
+        <div class="heading">
+            <span>Task Management</span>
+            <h1>Business Tasks</h1>
+        </div>
+        <form id="taskForm" class="form">
+            <input type="text" id="taskName" placeholder="Task Name" required>
+            <input type="date" id="taskDate" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <div id="taskList" class="list"></div>
+    </section>
+    <section class="about">
+        <div class="heading">
+            <span>About MindYourBusiness</span>
+            <h1>One place for your business</h1>
+            <p>Manage daily business information in a simple and organized way.</p>
+        </div>
+    </section>
+    <footer>
+        <h2><i class="bx bx-briefcase"></i> MindYourBusiness</h2>
+        <p>Simple management for small businesses.</p>
+        <div class="copyright">© 2026 MindYourBusiness | All Rights Reserved</div>
+    </footer>
+    <script src="project.js"></script>
+</body>
+</html>

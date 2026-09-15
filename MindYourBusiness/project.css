@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    text-decoration:none;
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-family:"Poppins",sans-serif;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    color:#000;
+    background:#fff;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0645ad;
+    color:#fff;
+    padding:15px 7%;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.logo{
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+}
+
+.logo i{
+    color:#ffd700;
+}
+
+.navbar{
+    display:flex;
+    gap:18px;
+}
+
+.navbar a{
+    color:#fff;
+    font-size:13px;
+    font-weight:500;
+}
+
+.navbar a:hover{
+    color:#ffd700;
+}
+
+.header-btn,.main-btn{
+    background:#e60000;
+    color:#fff;
+    padding:9px 17px;
+    border-radius:5px;
+    font-size:13px;
+    font-weight:600;
+}
+
+#menu-icon{
+    display:none;
+    font-size:28px;
+}
+
+section{
+    padding:60px 8%;
+}
+
+.home{
+    display:grid;
+    grid-template-columns:1.5fr 1fr;
+    gap:40px;
+    align-items:center;
+    background:#eee;
+    min-height:80vh;
+}
+
+.home-text span,.heading span{
+    color:#0645ad;
+    font-size:13px;
+    font-weight:700;
+}
+
+.home h1{
+    font-size:43px;
+    margin:10px 0;
+}
+
+.home h1 b{
+    color:#e60000;
+}
+
+.home-text p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:25px;
+    max-width:600px;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.heading h1{
+    font-size:30px;
+    margin:7px 0;
+}
+
+.heading p{
+    color:#666;
+    font-size:14px;
+}
+
+.dashboard-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.dash-box{
+    padding:25px;
+    text-align:center;
+    border:1px solid #ccc;
+}
+
+.dash-box i{
+    font-size:35px;
+    color:#0645ad;
+}
+
+.dash-box h3{
+    font-size:25px;
+    margin:8px 0;
+}
+
+.dash-box p{
+    font-size:13px;
+    color:#666;
+}
+
+.manage{
+    background:#eee;
+}
+
+.form{
+    max-width:800px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr auto;
+    gap:10px;
+    border:1px solid #ccc;
+}
+
+.form input{
+    padding:10px;
+    border:1px solid #bbb;
+    border-radius:4px;
+    outline:none;
+}
+
+.form input:focus{
+    border-color:#0645ad;
+}
+
+.form button{
+    padding:10px 15px;
+    background:#008000;
+    color:#fff;
+    border:0;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.list{
+    max-width:800px;
+    margin:20px auto 0;
+}
+
+.item{
+    background:#fff;
+    border:1px solid #ccc;
+    padding:12px 15px;
+    margin-bottom:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.item h3{
+    font-size:14px;
+}
+
+.item p{
+    font-size:12px;
+    color:#666;
+}
+
+.item button{
+    background:#e60000;
+    color:#fff;
+    border:0;
+    padding:7px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.low{
+    color:#e60000!important;
+    font-weight:600;
+}
+
+.about{
+    background:#fff;
+    text-align:center;
+}
+
+footer{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:40px 8%;
+}
+
+footer h2{
+    margin-bottom:8px;
+}
+
+footer i{
+    color:#e60000;
+}
+
+footer p{
+    color:#aaa;
+    font-size:13px;
+}
+
+.copyright{
+    border-top:1px solid #444;
+    margin-top:25px;
+    padding-top:15px;
+    color:#888;
+    font-size:12px;
+}
+
+@media(max-width:900px){
+    .navbar{
+        display:none;
+    }
+
+    #menu-icon{
+        display:block;
+    }
+
+    .header-btn{
+        display:none;
+    }
+
+    .home{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-container{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .form{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:550px){
+    header{
+        padding:14px 5%;
+    }
+
+    section{
+        padding:45px 5%;
+    }
+
+    .home h1{
+        font-size:34px;
+    }
+
+    .dashboard-container,.form{
+        grid-template-columns:1fr;
+    }
+
+    .home-box{
+        padding:35px 20px;
+    }
+}

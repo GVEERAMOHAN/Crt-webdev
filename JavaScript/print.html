@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter Your Name:</h3>
+    <input type="text" id="name">
+    <p id="result"></p>
+    <p id="result1"></p>
+    <script>
+        document.getElementById("name").addEventListener("input", function(enent){
+            document.getElementById("result").innerText = 
+            "using Input: " + event.target.value;
+        });
+        document.getElementById("name").addEventListener("change", function(enent){
+            document.getElementById("result1").innerText = 
+            "using Change: " + event.target.value;
+        });
+    </script>
+</body>
+</html>

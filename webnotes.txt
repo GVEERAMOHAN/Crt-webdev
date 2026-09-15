@@ -1,0 +1,11 @@
+-> Block-Level Element: The <div> tag is a block-level element, meaning it takes up the full width and starts on a new line.
+-> Styling with CSS: It can be styled using CSS, allowing customization like width, background color, padding, and margins.
+-> Inline-Block Option: By using display: inline-block, a <div> can behave like an inline element while retraining block-level features.
+-> Used for Layouts: <div> is aoften used in layouts with Flexbox or Grid to organize content and arrange sections of a webpage.
+
+Syntax:
+<div>
+  <!--Content goes here-->
+</div>
+
+Difference Between the id and class attributes:

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 1. 
+        // let student = {
+        //     name: "Mohan",
+        //     age: 18,
+        //     city: "Hyd",
+        //     isStdent: true
+        // };
+        // console.log(student.name);
+        // console.log(student["age"]);
+        // console.log(student.city);
+        // console.log(student.isStdent);
+
+        // //2. 
+        // let car = {};
+        // car.brand= "Ford";
+        // car.model= "Mustang";
+        // car["year"]= 1969;
+        // console.log(car);
+        // car["year"] = 2015;
+        // console.log(car);
+        // car.color= "Red";
+        // console.log(car);
+
+        // // 3. 
+        // let person = [
+        //     {name: "Nageswara", age: 53},
+        //     {name: "Kartheeksa", age: 41},
+        //     {name: "Mohan", age: 18},
+        // ];
+        // function findOldest(arr){
+        //     let oldest = arr[0];
+        //     for(let i = 1; i < arr.length; i++){
+        //         if(arr[i] > oldest.age){
+        //             oldest = arr[i];
+        //         }
+        //     }
+        //     return oldest;
+        // }
+        // let oldestPerson = findOldest(person);
+        // document.getElementById("result").innerText =
+        //     `Oldest person:  $(oldestPerson)`;
+
+        // 4. Create a function that takes a product object(name, price, quantity, discount%) and return final price after discount. Get values from user -> show final price.
+        function product(name, price, quantity, discount){
+            name: name;
+            price: Number(price);
+            qunatity: Number(quantity);
+            discount: Number(discount);
+        }
+        let name = prompt("Enter product name: ");
+        let price = prompt("Enter price in $: ");
+        let quantity = prompt("How many items you want: ");
+        let discount = prompt("How much discount(0 if none): ");;
+        let total_price = price * quantity;
+        let discount_price = (discount / 100) * total;
+        let final_price = total_price - discount_price;
+        console.log("final price is: ", final_price);
+    </script>
+</body>
+</html>

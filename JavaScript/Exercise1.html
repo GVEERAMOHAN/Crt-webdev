@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <p id="result1"></p>
+    <script>
+        // 1. 
+        let str = "Mohan";
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+        console.log(str.includes('a'));
+        console.log(str.includes('f'));
+        // 2. 
+        function vowelCount(sen){
+            let count = 0;
+            sen = sen.toLowerCase();
+            for (let i = 0; i < sen.length; i++){
+                if ("aeiou".includes(sen[i])){
+                    count++
+                }
+            }
+            return count;
+        }
+        let input = prompt("Enter a word for vowel count: ");
+        let count = vowelCount(input);
+        document.getElementById("result").innerText = "Count: " + count;
+        // 3. 
+        function palindrome(word){
+            let org = word; 
+            let rev = "";
+            for (let i = word.length-1; i >= 0; i--){
+                rev += word[i];
+            }
+            return rev;
+        }
+        let ip = prompt("Enter a word for palindrome: ");
+        let rev = palindrome(ip);
+        if (ip === rev){
+            document.getElementById("result1").innerText = "It's a palindrome";
+        }
+        else {
+            document.getElementById("result1").innerText = "Not a palindrome"
+        }
+    </script>
+</body>
+</html>
